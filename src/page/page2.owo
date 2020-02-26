@@ -1,0 +1,252 @@
+<template lang="pug">
+.page-2
+  //- 书法文字
+  .so-2-1.show-card(group="1" ind="1" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page1-2-2.png|")
+  .so-3-1.show-card(group="2" ind="2" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page1-4-2.png|")
+  .so-4-1.show-card(group="2" ind="3" o-tap="checkItem" info="测试3//中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page1-5-2.png|")
+  .so-5-1.show-card(group="1" ind="4" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page1-2-2.png|")
+  //- 樱花
+  img.so-3(src="@|page1-2.png|" o-animation="floatUpDownSmall")
+  img.so-2(src="@|page1-2.png|" o-animation="floatUpDownSmall")
+  .prop-box(o-if="this.data.showInfoProp")
+    //- 作者信息显示框
+    .text-box(style="width: 635px; height: 486px; background-image: url(@|page2-1-2.png|)")
+      .name#peopleName 冯远
+      ul
+        li(o-for="this.data.peopleInfo") {value}
+    img.next(src="@|page2-1-3.png|" o-tap="next")
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      speedY: [],
+      speedX: [],
+      checkItem: null,
+      showInfoProp: false,
+      showNextProp: false,
+      peopleName: '冯远',
+      peopleInfo: []
+    },
+    created: function () {
+      owo.query('.show-card').forEach(element => {
+        element.style.top = (element.offsetTop - 807 - 351 - autoScaleInfo.hideHeight) - 40 + 'px'
+        setTimeout(() => {
+          element.style.transition = 'top 1s linear, left 1s linear';
+        }, 500);
+        
+      })
+      setTimeout(() => {
+        this.drop()
+      }, 2000);
+    },
+    drop: function () {
+      let next = false
+      for (const key in owo.query('.show-card')) {
+        if (owo.query('.show-card').hasOwnProperty(key)) {
+          if (!this.data.speedY[key]) this.data.speedY[key] = owo.tool.randomNum(0, 100)
+          this.data.speedX[key] = owo.tool.randomNum(-40, 40)
+          const element = owo.query('.show-card')[key];
+          // element.style.top = '1157px'
+          let topValue = element.offsetTop + autoScaleInfo.showHeight * 0.2 + this.data.speedY[key]
+          // 不能让它一直掉掉出屏幕
+          const maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20
+          if (topValue > maxTop) topValue = maxTop
+          if (topValue < maxTop) {
+            next = true
+          }
+          // 左右偏移
+          element.style.top = topValue + 'px'
+          if(topValue != maxTop) element.style.left = element.x + this.data.speedX[key] + 'px'
+        }
+      }
+      setTimeout(() => {
+        if (next) this.drop()
+        else this.dropEnd()
+      }, 1000);
+    },
+    checkItem: function () {
+      const group = this.$target.getAttribute('group')
+      const index = this.$target.getAttribute('ind')
+      const info = this.$target.getAttribute('info')
+      new Audio("@|Button34.wav|").play()
+      // 判断是否点击了同样的
+      if (this.data.checkItem === null) {
+        this.data.checkItem = {
+          group,
+          index
+        }
+        this.$target.classList.add('check')
+      } else {
+        if (index === this.data.checkItem.index) {
+          // this.$target.classList.remove('check')
+          // this.data.checkItem = null
+          this.showInfo(info)
+          return
+        }
+        if (group == this.data.checkItem.group) {
+          owo.query(`[group="${group}"]`).forEach(element => {
+            new Audio("@|Button32.wav|").play()
+            element.classList.add('clear')
+            element.classList.remove('check')
+            this.data.checkItem = null
+          });
+        }
+      }
+    },
+    showInfo: function(info) {
+      info = info.split('/')
+      owo.id.peopleName.innerText = info[0]
+      this.data.peopleInfo = info.slice(1)
+      this.data.showInfoProp = !this.data.showInfoProp
+      this.handleEvent()
+    },
+    dropEnd: function () {
+      setTimeout(() => {
+      }, 100);
+    },
+    next: function () {
+      this.data.showInfoProp = false
+      this.handleEvent()
+    }
+  }
+</script>
+
+
+<style lang="less">
+.page-2 {
+  background-image: url('@|page2.jpg|');
+}
+.so-4-1 {
+  position: absolute;
+  left: 45px;
+  top: 396px;
+  width: 351px;
+  height: 351px;
+  z-index: 4;
+}
+.so-5-1 {
+  position: absolute;
+  left: 339px;
+  top: 623px;
+  width: 351px;
+  height: 351px;
+  z-index: 5;
+}
+.so-3-1 {
+  position: absolute;
+  left: 57px;
+  top: 807px;
+  width: 351px;
+  height: 351px;
+  z-index: 3;
+}
+.so-2-1 {
+  position: absolute;
+  left: 311px;
+  top: 168px;
+  width: 351px;
+  height: 351px;
+  z-index: 2;
+}
+.text-bg {
+  position: absolute;
+  left: 20px;
+  z-index: 1;
+  top: 20px;
+  user-select: none;
+  pointer-events: none;
+}
+.so-3 {
+  position: absolute;
+  left: -11px;
+  z-index: 3;
+  top: 725px;
+  user-select: none;
+  pointer-events: none;
+}
+.so-2 {
+  position: absolute;
+  left: 324px;
+  z-index: 2;
+  top: 570px;
+  user-select: none;
+  pointer-events: none;
+}
+.text {
+  position: absolute;
+  left: 104px;
+  z-index: 2;
+  top: 77px;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.6s, opacity 0.3s;
+}
+.show-card {
+  padding: 20px;
+  z-index: 99;
+}
+.check {
+  background-image: url('@|check.png|');
+  background-position: -2px -8px;
+  background-size: 400px;
+}
+.clear .text {
+  transform: scale(0);
+  opacity: 0;
+}
+.prop-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  .text-box {
+    position: absolute;
+    left: 58px;
+    z-index: 2;
+    top: 490px;
+    ul {
+      font-family: STKaiti;
+      font-size: 32px;
+      line-height: 54px;
+      width: 400px;
+      top: 195px;
+      position: absolute;
+      left: 150px;
+    }
+    li {
+      background-image: url('@|doit.png|');
+      background-repeat: no-repeat;
+      background-position: center left;
+      padding-left: 20px;
+    }
+  }
+  .name {
+    position: absolute;
+    top: 89px;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+    font-family: STKaiti;
+    font-weight: bold;
+  }
+  .next {
+    position: absolute;
+    left: 203px;
+    z-index: 3;
+    top: 1002px
+  }
+}
+</style>

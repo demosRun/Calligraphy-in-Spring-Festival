@@ -1,0 +1,104 @@
+<template lang="pug">
+.page-1
+  img.so-2#meihua(src="@|start-2.png|")
+  img.so-3#huaban(src="@|start-3.png|")
+  img.so-4#mainText(src="@|start-4.png|")
+  img.so-5#yinzhang(src="@|start-5.png|" o-animation="shrink" o-tap="switchProp")
+  img.so-6#yanzi(src="@|start-6.png|")
+  img.so-7(src="@|start-7.png|")
+  //- 游戏介绍弹窗
+  .game-prop(o-if="this.data.showProp")
+    img.so-2(src="@|page1-1-2.png|")
+    img.so-3(src="@|page1-1-3.png|" go="page2///fade/moveFromRight/fade/moveFromLeft")
+    img.so-4(src="@|page1-1-4.png|" o-tap="switchProp")
+  
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      showProp: false
+    },
+    created: function () {
+      console.log(this)
+      owo.tool.animate('fadeInRight', owo.id.meihua, 500)
+      owo.tool.animate('fadeIn', owo.id.mainText, 800)
+      owo.tool.animate('fadeInRightBig', owo.id.yanzi, 800)
+      owo.tool.animate('fadeIn', owo.id.huaban, 1600)
+    },
+    switchProp: function () {
+      this.data.showProp = !this.data.showProp
+      this.handleEvent()
+    }
+  }
+</script>
+
+
+<style lang="less">
+.page-1 {
+  background-image: url('@|page1.jpg|');
+}
+.so-2 {
+  position: absolute;
+  left: 245px;
+  z-index: 2;
+  top: 0px
+}
+.so-4 {
+  position: absolute;
+  left: 96px;
+  z-index: 4;
+  top: 254px
+}
+.so-5 {
+  position: absolute;
+  left: 271px;
+  z-index: 5;
+  top: 919px
+}
+.so-6 {
+  position: absolute;
+  left: 504px;
+  z-index: 6;
+  top: 909px
+}
+.so-7 {
+  position: absolute;
+  left: 212px;
+  z-index: 7;
+  top: 1208px
+}
+.so-3 {
+  position: absolute;
+  left: 22px;
+  z-index: 3;
+  top: 411px
+}
+.game-prop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+  .so-2 {
+    position: absolute;
+    left: 86px;
+    z-index: 2;
+    top: 201px
+  }
+  .so-3 {
+    position: absolute;
+    left: 216px;
+    z-index: 3;
+    top: 1081px
+  }
+  .so-4 {
+    position: absolute;
+    left: 342px;
+    z-index: 4;
+    top: 1205px
+  }
+}
+</style>

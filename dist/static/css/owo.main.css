@@ -1,0 +1,409 @@
+body, html, .page, .page-box {
+  padding: 0;
+  margin: 0;
+}
+
+.owo-animation {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.owo-animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owo-animation-forward {
+  z-index: 99;
+}
+
+img {
+  border: none;
+}
+
+/* 清除浮动 */
+.clear:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+.owo-animation-shrink {
+  -webkit-animation: shrink 1s linear alternate infinite;
+  animation: shrink 1s linear alternate infinite;
+}
+@-webkit-keyframes shrink{
+  0%{-webkit-transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes shrink{
+  0%{-webkit-transform:scale(0.9);transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+
+.page-1 {
+  background-image: url('../resource/page1.jpg');
+}
+
+.page-1 .so-2 {
+  position: absolute;
+  left: 245px;
+  z-index: 2;
+  top: 0px;
+}
+
+.page-1 .so-4 {
+  position: absolute;
+  left: 96px;
+  z-index: 4;
+  top: 254px;
+}
+
+.page-1 .so-5 {
+  position: absolute;
+  left: 271px;
+  z-index: 5;
+  top: 919px;
+}
+
+.page-1 .so-6 {
+  position: absolute;
+  left: 504px;
+  z-index: 6;
+  top: 909px;
+}
+
+.page-1 .so-7 {
+  position: absolute;
+  left: 212px;
+  z-index: 7;
+  top: 1208px;
+}
+
+.page-1 .so-3 {
+  position: absolute;
+  left: 22px;
+  z-index: 3;
+  top: 411px;
+}
+
+.page-1 .game-prop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+}
+
+.page-1 .game-prop .so-2 {
+  position: absolute;
+  left: 86px;
+  z-index: 2;
+  top: 201px;
+}
+
+.page-1 .game-prop .so-3 {
+  position: absolute;
+  left: 216px;
+  z-index: 3;
+  top: 1081px;
+}
+
+.page-1 .game-prop .so-4 {
+  position: absolute;
+  left: 342px;
+  z-index: 4;
+  top: 1205px;
+}
+.owo-animation-floatUpDownSmall {
+  -webkit-animation: floatUpDownSmall 3s linear infinite;
+  animation: floatUpDownSmall 3s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes floatUpDownSmall {
+  0% { -webkit-transform: translateY(-2px); transform: translateY(-2px);}
+  50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
+  100% {-webkit-transform: translateY(-2px);transform: translateY(-2px);}
+}
+
+@keyframes floatUpDownSmall {
+  0% { -webkit-transform: translateY(-2px); transform: translateY(-2px);}
+  50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
+  100% {-webkit-transform: translateY(-2px);transform: translateY(-2px);}
+}
+
+.page-2 {
+  background-image: url('../resource/page2.jpg');
+}
+
+.page-2 .so-4-1 {
+  position: absolute;
+  left: 45px;
+  top: 396px;
+  width: 351px;
+  height: 351px;
+  z-index: 4;
+}
+
+.page-2 .so-5-1 {
+  position: absolute;
+  left: 339px;
+  top: 623px;
+  width: 351px;
+  height: 351px;
+  z-index: 5;
+}
+
+.page-2 .so-3-1 {
+  position: absolute;
+  left: 57px;
+  top: 807px;
+  width: 351px;
+  height: 351px;
+  z-index: 3;
+}
+
+.page-2 .so-2-1 {
+  position: absolute;
+  left: 311px;
+  top: 168px;
+  width: 351px;
+  height: 351px;
+  z-index: 2;
+}
+
+.page-2 .text-bg {
+  position: absolute;
+  left: 20px;
+  z-index: 1;
+  top: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.page-2 .so-3 {
+  position: absolute;
+  left: -11px;
+  z-index: 3;
+  top: 725px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.page-2 .so-2 {
+  position: absolute;
+  left: 324px;
+  z-index: 2;
+  top: 570px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.page-2 .text {
+  position: absolute;
+  left: 104px;
+  z-index: 2;
+  top: 77px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.6s;
+  transition: opacity 0.3s, -webkit-transform 0.6s;
+  transition: transform 0.6s, opacity 0.3s;
+  transition: transform 0.6s, opacity 0.3s, -webkit-transform 0.6s;
+}
+
+.page-2 .show-card {
+  padding: 20px;
+  z-index: 99;
+}
+
+.page-2 .check {
+  background-image: url('../resource/check.png');
+  background-position: -2px -8px;
+  background-size: 400px;
+}
+
+.page-2 .clear .text {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.page-2 .prop-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.page-2 .prop-box .text-box {
+  position: absolute;
+  left: 58px;
+  z-index: 2;
+  top: 490px;
+}
+
+.page-2 .prop-box .text-box ul {
+  font-family: STKaiti;
+  font-size: 32px;
+  line-height: 54px;
+  width: 400px;
+  top: 195px;
+  position: absolute;
+  left: 150px;
+}
+
+.page-2 .prop-box .text-box li {
+  background-image: url('../resource/doit.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 20px;
+}
+
+.page-2 .prop-box .name {
+  position: absolute;
+  top: 89px;
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  line-height: 60px;
+  font-family: STKaiti;
+  font-weight: bold;
+}
+
+.page-2 .prop-box .next {
+  position: absolute;
+  left: 203px;
+  z-index: 3;
+  top: 1002px;
+}
+/* 页面切换动画 */
+.o-page-fade {
+	-webkit-animation: fade .7s ease both;
+	-moz-animation: fade .7s ease both;
+	animation: fade .7s ease both;
+}
+
+@-webkit-keyframes fade {
+	to { opacity: 0; }
+}
+@-moz-keyframes fade {
+	to { opacity: 0; }
+}
+@keyframes fade {
+	to { opacity: 0; }
+}
+.o-page-moveFromRight {
+	-webkit-animation: moveFromRight .6s ease both;
+	-moz-animation: moveFromRight .6s ease both;
+	animation: moveFromRight .6s ease both;
+}
+
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRight {
+	from { -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
+.o-page-moveFromLeft {
+	-webkit-animation: moveFromLeft .6s ease both;
+	-moz-animation: moveFromLeft .6s ease both;
+	animation: moveFromLeft .6s ease both;
+}
+
+@-webkit-keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveFromLeft {
+	from { -moz-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+	from { transform: translateX(-100%); }
+}
+
+/* 动画效果 */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRightBig {
+  animation-name: fadeInRightBig;
+}
+
