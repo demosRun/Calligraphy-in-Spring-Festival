@@ -1,0 +1,31 @@
+<template lang="pug">
+//- 游戏失败显示框
+.prop-box
+  img.so-2(src="@|prop-3-2.png|")
+  img.so-3(src="@|prop-3-3.png|" o-tap="location.reload()")
+</template>
+
+<script>
+module.exports = {
+  showProp: function () {
+    this.$el.style.display = 'block'
+  }
+}
+</script>
+<style lang="less">
+.prop-box {
+  display: none;
+}
+.so-2 {
+  position: absolute;
+  left: 126px;
+  z-index: 2;
+  top: 667px
+}
+.so-3 {
+  position: absolute;
+  left: 292px;
+  z-index: 3;
+  top: 858px
+}
+</style>

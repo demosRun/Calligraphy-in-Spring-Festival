@@ -1,0 +1,12 @@
+<template lang="pug">
+.box
+</template>
+<script>
+module.exports = {
+  data: {
+    "sd": "sd"
+  }
+}
+</script>
+<style lang="less">
+</style>

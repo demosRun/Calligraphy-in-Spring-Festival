@@ -108,6 +108,31 @@
 			"name": "page3",
 			"src": "/src/page/page3.owo",
 			"type": "page"
+		},
+		{
+			"name": "page4",
+			"src": "/src/page/page4.owo",
+			"type": "page"
+		},
+		{
+			"name": "share",
+			"src": "/src/page/share.owo",
+			"type": "page"
+		},
+		{
+			"name": "people",
+			"src": "/src/page/people.owo",
+			"type": "block"
+		},
+		{
+			"name": "fail",
+			"src": "/src/page/fail.owo",
+			"type": "block"
+		},
+		{
+			"name": "flower",
+			"src": "/src/page/flower.owo",
+			"type": "block"
 		}
 	],
 	"mode": {

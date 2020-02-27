@@ -1,0 +1,30 @@
+<template lang="pug">
+//- 作者信息显示框
+.prop-box(o-if="this.data.showInfoProp")
+  .text-box(style="width: 635px; height: 486px; background-image: url(@|page2-1-2.png|)")
+    .name#peopleName 冯远
+    ul
+      li(o-for="this.data.peopleInfo") {value}
+  img.next(src="@|page2-1-3.png|" o-tap="close")
+</template>
+<script>
+module.exports = {
+  data: {
+    showInfoProp: false,
+    peopleInfo:[]
+  },
+  showInfo: function(info) {
+    info = info.split('/')
+    owo.id.peopleName.innerText = info[0]
+    this.data.peopleInfo = info.slice(1)
+    this.data.showInfoProp = !this.data.showInfoProp
+    this.handleEvent()
+  },
+  close: function () {
+    this.data.showInfoProp = false
+    this.handleEvent()
+  }
+}
+</script>
+<style lang="less">
+</style>

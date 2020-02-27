@@ -25,20 +25,10 @@
   .so-2.show-card(group="3" ind="8" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
     img.text-bg(src="@|page1-2-1.png|")
     img.text(src="@|page3-2-2.png|")
-  //- 樱花
-  img.flower-3(src="@|page1-2.png|" o-animation="floatUpDownSmall")
-  img.flower-2(src="@|page1-2.png|" o-animation="floatUpDownSmall")
-  //- 作者信息显示框
-  .prop-box(o-if="this.data.showInfoProp")
-    .text-box(style="width: 635px; height: 486px; background-image: url(@|page2-1-2.png|)")
-      .name#peopleName 冯远
-      ul
-        li(o-for="this.data.peopleInfo") {value}
-    img.next(src="@|page2-1-3.png|" o-tap="next")
   //- 过关显示框
   .prop-box.complete-prop#prop2
     img.prop-so-2(src="@|prop-1-2.png|")
-    img.prop-so-3(src="@|prop-1-3.png|" go="page3///fade/moveFromRight/true")
+    img.prop-so-3(src="@|prop-1-3.png|" go="page4///fade/moveFromRight/true")
 </template>
 
 <script>
@@ -108,7 +98,7 @@
         if (index === this.data.checkItem.index) {
           // this.$target.classList.remove('check')
           // this.data.checkItem = null
-          this.showInfo(info)
+          owo.script.people.showInfo(info)
           return
         }
         if (group == this.data.checkItem.group) {
@@ -130,15 +120,9 @@
         }
       }
     },
-    showInfo: function(info) {
-      info = info.split('/')
-      owo.id.peopleName.innerText = info[0]
-      this.data.peopleInfo = info.slice(1)
-      this.data.showInfoProp = !this.data.showInfoProp
-      this.handleEvent()
-    },
     dropEnd: function () {
       setTimeout(() => {
+        owo.script.fail.showProp()
       }, 100);
     },
     next: function () {
@@ -165,9 +149,6 @@
 
 
 <style lang="less">
-.page-3 {
-  background-image: url('@|page2.jpg|');
-}
 .so-9 {position: absolute; left: 452px; top: 614px; width: 281px; height: 282px; z-index: 9;}
 .so-8 {position: absolute; left: 422px; top: 174px; width: 281px; height: 281px; z-index: 8;}
 .so-7 {position: absolute; left: 81px; top: 95px; width: 282px; height: 285px; z-index: 7;}

@@ -1,0 +1,350 @@
+<template lang="pug">
+.page-4
+  .item-1.show-card(group="1" ind="1" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-1.png|")
+  .item-2.show-card(group="1" ind="2" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-1.png|")
+  .item-3.show-card(group="2" ind="3" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-2.png|")
+  .item-4.show-card(group="2" ind="4" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-2.png|")
+  .item-5.show-card(group="3" ind="5" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-3.png|")
+  .item-6.show-card(group="3" ind="6" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-3.png|")
+  .item-7.show-card(group="4" ind="7" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-4.png|")
+  .item-8.show-card(group="4" ind="8" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-4.png|")
+  .item-9.show-card(group="5" ind="9" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-5.png|")
+  .item-10.show-card(group="5" ind="10" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-5.png|")
+  .item-11.show-card(group="6" ind="11" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-6.png|")
+  .item-12.show-card(group="6" ind="12" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-6.png|")
+  .item-13.show-card(group="7" ind="13" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-7.png|")
+  .item-14.show-card(group="7" ind="14" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-7.png|")
+  .item-15.show-card(group="8" ind="15" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-8.png|")
+  .item-16.show-card(group="8" ind="16" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-8.png|")
+  .item-17.show-card(group="9" ind="17" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-9.png|")
+  .item-18.show-card(group="9" ind="18" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-9.png|")
+  .item-19.show-card(group="10" ind="19" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-10.png|")
+  .item-20.show-card(group="10" ind="20" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-10.png|")
+  .item-21.show-card(group="11" ind="21" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-11.png|")
+  .item-22.show-card(group="11" ind="22" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-11.png|")
+  .item-23.show-card(group="12" ind="23" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-12.png|")
+  .item-24.show-card(group="12" ind="24" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-12.png|")
+  .item-25.show-card(group="13" ind="25" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-13.png|")
+  .item-26.show-card(group="13" ind="26" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-13.png|")
+  .item-27.show-card(group="14" ind="27" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-14.png|")
+  .item-28.show-card(group="14" ind="28" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page4-14.png|")
+  //- 过关显示框
+  .prop-box.complete-prop#prop3
+    img.so-2(src="@|prop-4-2.png|")
+    img.so-3(src="@|prop-4-3.png|")
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      speedY: [],
+      speedX: [],
+      checkItem: null,
+      showNextProp: false,
+      peopleName: '冯远',
+      peopleInfo: [],
+      isPlaying: true
+    },
+    created: function () {
+      owo.query('.show-card').forEach(element => {
+        element.style.top = (element.offsetTop - 1035 - 351 - autoScaleInfo.hideHeight) - 40 + 'px'
+        setTimeout(() => {
+          element.style.transition = 'top 1s linear, left 1s linear';
+        }, 500);
+        
+      })
+      setTimeout(() => {
+        this.drop()
+      }, 2000);
+    },
+    drop: function () {
+      if (!this.data.isPlaying) return
+      let next = false
+      for (const key in owo.query('.show-card')) {
+        if (owo.query('.show-card').hasOwnProperty(key)) {
+          if (!this.data.speedY[key]) this.data.speedY[key] = owo.tool.randomNum(0, 30)
+          this.data.speedX[key] = owo.tool.randomNum(-40, 40)
+          const element = owo.query('.show-card')[key];
+          // element.style.top = '1157px'
+          let topValue = element.offsetTop + autoScaleInfo.showHeight * 0.05 + this.data.speedY[key]
+          // 不能让它一直掉掉出屏幕
+          const maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20
+          if (topValue > maxTop) topValue = maxTop
+          if (topValue < maxTop) {
+            next = true
+          }
+          // 左右偏移
+          element.style.top = topValue + 'px'
+          if(topValue != maxTop) element.style.left = element.x + this.data.speedX[key] + 'px'
+        }
+      }
+      setTimeout(() => {
+        if (next) this.drop()
+        else this.dropEnd()
+      }, 1000);
+    },
+    checkItem: function () {
+      const group = this.$target.getAttribute('group')
+      const index = this.$target.getAttribute('ind')
+      const info = this.$target.getAttribute('info')
+      new Audio("@|Button34.wav|").play()
+      // 判断是否点击了同样的
+      if (this.data.checkItem === null) {
+        this.data.checkItem = {
+          group,
+          index,
+          element: this.$target
+        }
+        this.$target.classList.add('check')
+      } else {
+        if (index === this.data.checkItem.index) {
+          // this.$target.classList.remove('check')
+          // this.data.checkItem = null
+          owo.script.people.showInfo(info)
+          return
+        }
+        if (group == this.data.checkItem.group) {
+          new Audio("@|Button32.wav|").play()
+          owo.query(`[group="${group}"]`).forEach(element => {
+            element.classList.add('clear')
+            element.classList.remove('check')
+            this.data.checkItem = null
+          });
+          this.checkClear()
+        } else {
+          this.data.checkItem.element.classList.remove('check')
+          this.data.checkItem = {
+            group,
+            index,
+            element: this.$target
+          }
+          this.$target.classList.add('check')
+        }
+      }
+    },
+    dropEnd: function () {
+      setTimeout(() => {
+        owo.script.fail.showProp()
+      }, 100);
+    },
+    checkClear: function () {
+      let complete = true
+      owo.query(`[group]`).forEach(element => {
+        if (!element.classList.contains('clear')) {
+          complete = false
+        }
+      })
+      // 判断是否结束了
+      if (complete) {
+        this.data.isPlaying = false
+        setTimeout(() => {
+          owo.id.prop3.style.display = 'block'
+        }, 0)
+      }
+    }
+  }
+</script>
+
+
+<style lang="less">
+.show-card {
+  position: absolute;
+  width: 282px;
+  height: 282px;
+}
+.item-1 {
+  left: 0%;
+  top: 40%;
+}
+.item-2 {
+  left: 0%;
+  top: 20%;
+}
+.item-3 {
+  left: 22%;
+  top: 54%;
+}
+.item-4 {
+  left: 30%;
+  top: 30%;
+}
+.item-5 {
+  left: 60%;
+  top: 64%;
+}
+.item-6 {
+  left: 10%;
+  top: 30%;
+}
+.item-7 {
+  left: 70%;
+  top: 14%;
+}
+.item-8 {
+  left: 20%;
+  top: -10%;
+}
+.item-9 {
+  left: 5%;
+  top: -67%;
+}
+.item-10 {
+  left: 27%;
+  top: -46%;
+}
+.item-11 {
+  left: 55%;
+  top: -28%;
+}
+.item-12 {
+  left: 4%;
+  top: -30%;
+}
+.item-13 {
+  left: 20%;
+  top: -52%;
+}
+.item-14 {
+  left: 15%;
+  top: -68%;
+}
+.item-15 {
+  left: 60%;
+  top: -82%;
+}
+.item-16 {
+  left: 30%;
+  top: -104%;
+}
+.item-17 {
+  left: 10%;
+  top: -126%;
+}
+.item-18 {
+  left: 54%;
+  top: -148%;
+}
+.item-19 {
+  left: 72%;
+  top: -167%;
+}
+.item-20 {
+  left: 22%;
+  top: -151%;
+}
+.item-21 {
+  left: 14%;
+  top: -195%;
+}
+.item-22 {
+  left: 40%;
+  top: -218%;
+}
+.item-23 {
+  left: 33%;
+  top: -220%;
+}
+.item-24 {
+  left: 2%;
+  top: -221%;
+}
+.item-25 {
+  left: 54%;
+  top: -259%;
+}
+.item-26 {
+  left: 0%;
+  top: -263%;
+}
+.item-27 {
+  left: 65%;
+  top: -245%;
+}
+.item-28 {
+  left: 15%;
+  top: -247%;
+}
+.text-bg {
+  width: 282px;
+  height: 282px;
+}
+.text {
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 65px;
+}
+.check {
+  background-size: 330px;
+}
+.prop-box  {
+  .so-2 {
+    position: absolute;
+    left: 66px;
+    z-index: 2;
+    top: 533px
+  }
+  .so-3 {
+    position: absolute;
+    left: 203px;
+    z-index: 3;
+    top: 1002px
+  }
+}
+</style>

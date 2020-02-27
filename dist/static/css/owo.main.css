@@ -59,6 +59,7 @@ li {
 }
 
 .page-1 {
+  z-index: 2;
   background-image: url('../resource/page1.jpg');
 }
 
@@ -134,29 +135,6 @@ li {
   z-index: 4;
   top: 1205px;
 }
-.owo-animation-floatUpDownSmall {
-  -webkit-animation: floatUpDownSmall 3s linear infinite;
-  animation: floatUpDownSmall 3s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@-webkit-keyframes floatUpDownSmall {
-  0% { -webkit-transform: translateY(-2px); transform: translateY(-2px);}
-  50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
-  100% {-webkit-transform: translateY(-2px);transform: translateY(-2px);}
-}
-
-@keyframes floatUpDownSmall {
-  0% { -webkit-transform: translateY(-2px); transform: translateY(-2px);}
-  50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
-  100% {-webkit-transform: translateY(-2px);transform: translateY(-2px);}
-}
-
-.page-2 {
-  background-image: url('../resource/page2.jpg');
-}
-
 .page-2 .so-4-1 {
   position: absolute;
   left: 45px;
@@ -210,10 +188,6 @@ li {
   z-index: 3;
   top: 1002px;
 }
-.page-3 {
-  background-image: url('../resource/page2.jpg');
-}
-
 .page-3 .so-9 {
   position: absolute;
   left: 452px;
@@ -319,6 +293,232 @@ li {
 .page-3 .check {
   background-position: -6px -8px;
   background-size: 335px;
+}
+.page-4 .show-card {
+  position: absolute;
+  width: 282px;
+  height: 282px;
+}
+
+.page-4 .item-1 {
+  left: 0%;
+  top: 40%;
+}
+
+.page-4 .item-2 {
+  left: 0%;
+  top: 20%;
+}
+
+.page-4 .item-3 {
+  left: 22%;
+  top: 54%;
+}
+
+.page-4 .item-4 {
+  left: 30%;
+  top: 30%;
+}
+
+.page-4 .item-5 {
+  left: 60%;
+  top: 64%;
+}
+
+.page-4 .item-6 {
+  left: 10%;
+  top: 30%;
+}
+
+.page-4 .item-7 {
+  left: 70%;
+  top: 14%;
+}
+
+.page-4 .item-8 {
+  left: 20%;
+  top: -10%;
+}
+
+.page-4 .item-9 {
+  left: 5%;
+  top: -67%;
+}
+
+.page-4 .item-10 {
+  left: 27%;
+  top: -46%;
+}
+
+.page-4 .item-11 {
+  left: 55%;
+  top: -28%;
+}
+
+.page-4 .item-12 {
+  left: 4%;
+  top: -30%;
+}
+
+.page-4 .item-13 {
+  left: 20%;
+  top: -52%;
+}
+
+.page-4 .item-14 {
+  left: 15%;
+  top: -68%;
+}
+
+.page-4 .item-15 {
+  left: 60%;
+  top: -82%;
+}
+
+.page-4 .item-16 {
+  left: 30%;
+  top: -104%;
+}
+
+.page-4 .item-17 {
+  left: 10%;
+  top: -126%;
+}
+
+.page-4 .item-18 {
+  left: 54%;
+  top: -148%;
+}
+
+.page-4 .item-19 {
+  left: 72%;
+  top: -167%;
+}
+
+.page-4 .item-20 {
+  left: 22%;
+  top: -151%;
+}
+
+.page-4 .item-21 {
+  left: 14%;
+  top: -195%;
+}
+
+.page-4 .item-22 {
+  left: 40%;
+  top: -218%;
+}
+
+.page-4 .item-23 {
+  left: 33%;
+  top: -220%;
+}
+
+.page-4 .item-24 {
+  left: 2%;
+  top: -221%;
+}
+
+.page-4 .item-25 {
+  left: 54%;
+  top: -259%;
+}
+
+.page-4 .item-26 {
+  left: 0%;
+  top: -263%;
+}
+
+.page-4 .item-27 {
+  left: 65%;
+  top: -245%;
+}
+
+.page-4 .item-28 {
+  left: 15%;
+  top: -247%;
+}
+
+.page-4 .text-bg {
+  width: 282px;
+  height: 282px;
+}
+
+.page-4 .text {
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 65px;
+}
+
+.page-4 .check {
+  background-size: 330px;
+}
+
+.page-4 .prop-box .so-2 {
+  position: absolute;
+  left: 66px;
+  z-index: 2;
+  top: 533px;
+}
+
+.page-4 .prop-box .so-3 {
+  position: absolute;
+  left: 203px;
+  z-index: 3;
+  top: 1002px;
+}
+
+
+.prop-box {
+  display: none;
+}
+
+.prop-box .so-2 {
+  position: absolute;
+  left: 126px;
+  z-index: 2;
+  top: 667px;
+}
+
+.prop-box .so-3 {
+  position: absolute;
+  left: 292px;
+  z-index: 3;
+  top: 858px;
+}
+.owo-animation-floatUpDownSmall {
+  -webkit-animation: floatUpDownSmall 3s linear infinite;
+  animation: floatUpDownSmall 3s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes floatUpDownSmall {
+  0% { -webkit-transform: translateY(-2px); transform: translateY(-2px);}
+  50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
+  100% {-webkit-transform: translateY(-2px);transform: translateY(-2px);}
+}
+
+@keyframes floatUpDownSmall {
+  0% { -webkit-transform: translateY(-2px); transform: translateY(-2px);}
+  50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
+  100% {-webkit-transform: translateY(-2px);transform: translateY(-2px);}
+}
+
+.flower {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 /* 页面切换动画 */
 .o-page-fade {

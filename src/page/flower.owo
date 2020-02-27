@@ -1,0 +1,19 @@
+<template lang="pug">
+//- 页面上的樱花
+.flower
+  img.flower-3(src="@|page1-2.png|" o-animation="floatUpDownSmall")
+  img.flower-2(src="@|page1-2.png|" o-animation="floatUpDownSmall")
+</template>
+
+<style lang="less">
+.flower {
+  position: absolute;
+  left: 0;
+  top: 0;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+</style>
