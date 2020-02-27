@@ -1,18 +1,30 @@
 <template lang="pug">
-.page-2
+.page-3
   //- 书法文字
-  .so-2-1.show-card(group="1" ind="1" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+  .so-9.show-card(group="1" ind="1" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
     img.text-bg(src="@|page1-2-1.png|")
-    img.text(src="@|page1-2-2.png|")
-  .so-3-1.show-card(group="2" ind="2" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席")
+    img.text(src="@|page3-3-2.png|")
+  .so-8.show-card(group="2" ind="2" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席")
     img.text-bg(src="@|page1-2-1.png|")
-    img.text(src="@|page1-4-2.png|")
-  .so-4-1.show-card(group="2" ind="3" o-tap="checkItem" info="测试3//中国美术家协会名誉主席")
+    img.text(src="@|page3-4-2.png|")
+  .so-7.show-card(group="3" ind="3" o-tap="checkItem" info="测试3//中国美术家协会名誉主席")
     img.text-bg(src="@|page1-2-1.png|")
-    img.text(src="@|page1-4-2.png|")
-  .so-5-1.show-card(group="1" ind="4" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text(src="@|page3-2-2.png|")
+  .so-6.show-card(group="2" ind="4" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
     img.text-bg(src="@|page1-2-1.png|")
-    img.text(src="@|page1-2-2.png|")
+    img.text(src="@|page3-4-2.png|")
+  .so-5.show-card(group="4" ind="5" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page3-5-2.png|")
+  .so-4.show-card(group="4" ind="6" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page3-5-2.png|")
+  .so-3.show-card(group="1" ind="7" o-tap="checkItem" info="测试3//中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page3-3-2.png|")
+  .so-2.show-card(group="3" ind="8" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席")
+    img.text-bg(src="@|page1-2-1.png|")
+    img.text(src="@|page3-2-2.png|")
   //- 樱花
   img.flower-3(src="@|page1-2.png|" o-animation="floatUpDownSmall")
   img.flower-2(src="@|page1-2.png|" o-animation="floatUpDownSmall")
@@ -24,8 +36,8 @@
         li(o-for="this.data.peopleInfo") {value}
     img.next(src="@|page2-1-3.png|" o-tap="next")
   //- 过关显示框
-  .prop-box.complete-prop#prop1
-    img.prop-so-2(src="@|prop-2-2.png|")
+  .prop-box.complete-prop#prop2
+    img.prop-so-2(src="@|prop-1-2.png|")
     img.prop-so-3(src="@|prop-1-3.png|" go="page3///fade/moveFromRight/true")
 </template>
 
@@ -43,7 +55,7 @@
     },
     created: function () {
       owo.query('.show-card').forEach(element => {
-        element.style.top = (element.offsetTop - 807 - 282 - autoScaleInfo.hideHeight) - 40 + 'px'
+        element.style.top = (element.offsetTop - 1035 - 351 - autoScaleInfo.hideHeight) - 40 + 'px'
         setTimeout(() => {
           element.style.transition = 'top 1s linear, left 1s linear';
         }, 500);
@@ -58,13 +70,13 @@
       let next = false
       for (const key in owo.query('.show-card')) {
         if (owo.query('.show-card').hasOwnProperty(key)) {
-          if (!this.data.speedY[key]) this.data.speedY[key] = owo.tool.randomNum(0, 100)
+          if (!this.data.speedY[key]) this.data.speedY[key] = owo.tool.randomNum(0, 30)
           this.data.speedX[key] = owo.tool.randomNum(-40, 40)
           const element = owo.query('.show-card')[key];
           // element.style.top = '1157px'
-          let topValue = element.offsetTop + autoScaleInfo.showHeight * 0.2 + this.data.speedY[key]
+          let topValue = element.offsetTop + autoScaleInfo.showHeight * 0.05 + this.data.speedY[key]
           // 不能让它一直掉掉出屏幕
-          const maxTop = 1508 - 282 + autoScaleInfo.hideHeight - 20
+          const maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20
           if (topValue > maxTop) topValue = maxTop
           if (topValue < maxTop) {
             next = true
@@ -144,7 +156,7 @@
       if (complete) {
         this.data.isPlaying = false
         setTimeout(() => {
-          owo.id.prop1.style.display = 'block'
+          owo.id.prop2.style.display = 'block'
         }, 0)
       }
     }
@@ -153,42 +165,17 @@
 
 
 <style lang="less">
-.page-2 {
+.page-3 {
   background-image: url('@|page2.jpg|');
 }
-.so-4-1 {
-  position: absolute;
-  left: 45px;
-  top: 396px;
-  width: 351px;
-  height: 351px;
-  z-index: 4;
-}
-.so-5-1 {
-  position: absolute;
-  left: 339px;
-  top: 623px;
-  width: 351px;
-  height: 351px;
-  z-index: 5;
-}
-.so-3-1 {
-  position: absolute;
-  left: 57px;
-  top: 807px;
-  width: 351px;
-  height: 351px;
-  z-index: 3;
-}
-.so-2-1 {
-  position: absolute;
-  left: 311px;
-  top: 168px;
-  width: 351px;
-  height: 351px;
-  z-index: 2;
-}
-
+.so-9 {position: absolute; left: 452px; top: 614px; width: 281px; height: 282px; z-index: 9;}
+.so-8 {position: absolute; left: 422px; top: 174px; width: 281px; height: 281px; z-index: 8;}
+.so-7 {position: absolute; left: 81px; top: 95px; width: 282px; height: 285px; z-index: 7;}
+.so-6 {position: absolute; left: 442px; top: 1035px; width: 282px; height: 281px; z-index: 6;}
+.so-5 {position: absolute; left: 253px; top: 817px; width: 281px; height: 282px; z-index: 5;}
+.so-4 {position: absolute; left: 11px; top: 566px; width: 281px; height: 281px; z-index: 4;}
+.so-3 {position: absolute; left: 22px; top: 953px; width: 282px; height: 285px; z-index: 3;}
+.so-2 {position: absolute; left: 216px; top: 372px; width: 282px; height: 281px; z-index: 2;}
 .complete-prop {
   display: none;
   .prop-so-2 {
@@ -201,7 +188,21 @@
     position: absolute;
     left: 203px;
     z-index: 3;
-    top: 1002px;
+    top: 896px;
   }
+}
+.text-bg {
+  width: 282px;
+  height: 282px;
+}
+.text {
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 65px;
+}
+.check {
+  background-position: -6px -8px;
+  background-size: 335px;
 }
 </style>

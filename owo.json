@@ -103,6 +103,11 @@
 			"name": "page2",
 			"src": "./src/page/page2.owo",
 			"type": "page"
+		},
+		{
+			"name": "page3",
+			"src": "/src/page/page3.owo",
+			"type": "page"
 		}
 	],
 	"mode": {

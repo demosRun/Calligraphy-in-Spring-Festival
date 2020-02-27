@@ -30,9 +30,11 @@
   <body>
     <div class="scale-box"><!-- 页面区域 -->
     <!-- 页面[page1]-->
-    <div class="page-1 page" template="page1" style="display: none;"><img class="so-2" id="meihua" src="./static/resource/start-2.png"><img class="so-3" id="huaban" src="./static/resource/start-3.png"><img class="so-4" id="mainText" src="./static/resource/start-4.png"><img class="so-5 owo-animation-shrink" id="yinzhang" src="./static/resource/start-5.png" o-animation="shrink" o-tap="switchProp"><img class="so-6" id="yanzi" src="./static/resource/start-6.png"><img class="so-7" src="./static/resource/start-7.png"><div class="game-prop" o-if="this.data.showProp"><img class="so-2" src="./static/resource/page1-1-2.png"><img class="so-3" src="./static/resource/page1-1-3.png" go="page2///fade/moveFromRight/fade/moveFromLeft"><img class="so-4" src="./static/resource/page1-1-4.png" o-tap="switchProp"></div></div>
+    <div class="page-1 page" template="page1" style="display: none;"><img class="so-2" id="meihua" src="./static/resource/start-2.png"><img class="so-3" id="huaban" src="./static/resource/start-3.png"><img class="so-4" id="mainText" src="./static/resource/start-4.png"><img class="so-5 owo-animation-shrink" id="yinzhang" src="./static/resource/start-5.png" o-animation="shrink" o-tap="switchProp"><img class="so-6" id="yanzi" src="./static/resource/start-6.png"><img class="so-7" src="./static/resource/start-7.png"><div class="game-prop" o-if="this.data.showProp"><img class="so-2" src="./static/resource/page1-1-2.png"><img class="so-3" src="./static/resource/page1-1-3.png" go="page2///fade/moveFromRight/true"><img class="so-4" src="./static/resource/page1-1-4.png" o-tap="switchProp"></div></div>
     <!-- 页面[page2]-->
-    <div class="page-2 page" template="page2" style="display: none;"><div class="so-2-1 show-card" group="1" ind="1" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-2-2.png"></div><div class="so-3-1 show-card" group="2" ind="2" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-4-2.png"></div><div class="so-4-1 show-card" group="2" ind="3" o-tap="checkItem" info="测试3//中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-5-2.png"></div><div class="so-5-1 show-card" group="1" ind="4" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-2-2.png"></div><img class="so-3 owo-animation-floatUpDownSmall" src="./static/resource/page1-2.png" o-animation="floatUpDownSmall"><img class="so-2 owo-animation-floatUpDownSmall" src="./static/resource/page1-2.png" o-animation="floatUpDownSmall"><div class="prop-box" o-if="this.data.showInfoProp"><div class="text-box" style="width: 635px; height: 486px; background-image: url(./static/resource/page2-1-2.png)"><div class="name" id="peopleName">冯远</div><ul><li o-for="this.data.peopleInfo">{value}</li></ul></div><img class="next" src="./static/resource/page2-1-3.png" o-tap="next"></div></div></div>
+    <div class="page-2 page" template="page2" style="display: none;"><div class="so-2-1 show-card" group="1" ind="1" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-2-2.png"></div><div class="so-3-1 show-card" group="2" ind="2" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-4-2.png"></div><div class="so-4-1 show-card" group="2" ind="3" o-tap="checkItem" info="测试3//中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-4-2.png"></div><div class="so-5-1 show-card" group="1" ind="4" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page1-2-2.png"></div><img class="flower-3 owo-animation-floatUpDownSmall" src="./static/resource/page1-2.png" o-animation="floatUpDownSmall"><img class="flower-2 owo-animation-floatUpDownSmall" src="./static/resource/page1-2.png" o-animation="floatUpDownSmall"><div class="prop-box" o-if="this.data.showInfoProp"><div class="text-box" style="width: 635px; height: 486px; background-image: url(./static/resource/page2-1-2.png)"><div class="name" id="peopleName">冯远</div><ul><li o-for="this.data.peopleInfo">{value}</li></ul></div><img class="next" src="./static/resource/page2-1-3.png" o-tap="next"></div><div class="prop-box complete-prop" id="prop1"><img class="prop-so-2" src="./static/resource/prop-2-2.png"><img class="prop-so-3" src="./static/resource/prop-1-3.png" go="page3///fade/moveFromRight/true"></div></div>
+    <!-- 页面[page3]-->
+    <div class="page-3 page" template="page3" style="display: none;"><div class="so-9 show-card" group="1" ind="1" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-3-2.png"></div><div class="so-8 show-card" group="2" ind="2" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-4-2.png"></div><div class="so-7 show-card" group="3" ind="3" o-tap="checkItem" info="测试3//中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-2-2.png"></div><div class="so-6 show-card" group="2" ind="4" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-4-2.png"></div><div class="so-5 show-card" group="4" ind="5" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-5-2.png"></div><div class="so-4 show-card" group="4" ind="6" o-tap="checkItem" info="测试2/中国文联副主席、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-5-2.png"></div><div class="so-3 show-card" group="1" ind="7" o-tap="checkItem" info="测试3//中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-3-2.png"></div><div class="so-2 show-card" group="3" ind="8" o-tap="checkItem" info="冯远/中国文联副主席、/中央文史研究馆副馆长、/中国美术家协会名誉主席"><img class="text-bg" src="./static/resource/page1-2-1.png"><img class="text" src="./static/resource/page3-2-2.png"></div><img class="flower-3 owo-animation-floatUpDownSmall" src="./static/resource/page1-2.png" o-animation="floatUpDownSmall"><img class="flower-2 owo-animation-floatUpDownSmall" src="./static/resource/page1-2.png" o-animation="floatUpDownSmall"><div class="prop-box" o-if="this.data.showInfoProp"><div class="text-box" style="width: 635px; height: 486px; background-image: url(./static/resource/page2-1-2.png)"><div class="name" id="peopleName">冯远</div><ul><li o-for="this.data.peopleInfo">{value}</li></ul></div><img class="next" src="./static/resource/page2-1-3.png" o-tap="next"></div><div class="prop-box complete-prop" id="prop2"><img class="prop-so-2" src="./static/resource/prop-1-2.png"><img class="prop-so-3" src="./static/resource/prop-1-3.png" go="page3///fade/moveFromRight/true"></div></div></div>
     
 
     <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
@@ -65,13 +67,14 @@
       "showInfoProp": false,
       "showNextProp": false,
       "peopleName": "冯远",
-      "peopleInfo": []
+      "peopleInfo": [],
+      "isPlaying": true
     },
     "created": function created() {
       var _this = this;
 
       owo.query('.show-card').forEach(function (element) {
-        element.style.top = element.offsetTop - 807 - 351 - autoScaleInfo.hideHeight - 40 + 'px';
+        element.style.top = element.offsetTop - 807 - 282 - autoScaleInfo.hideHeight - 40 + 'px';
         setTimeout(function () {
           element.style.transition = 'top 1s linear, left 1s linear';
         }, 500);
@@ -83,6 +86,7 @@
     "drop": function drop() {
       var _this2 = this;
 
+      if (!this.data.isPlaying) return;
       var next = false;
 
       for (var key in owo.query('.show-card')) {
@@ -93,7 +97,7 @@
 
           var topValue = element.offsetTop + autoScaleInfo.showHeight * 0.2 + this.data.speedY[key]; // 不能让它一直掉掉出屏幕
 
-          var maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20;
+          var maxTop = 1508 - 282 + autoScaleInfo.hideHeight - 20;
           if (topValue > maxTop) topValue = maxTop;
 
           if (topValue < maxTop) {
@@ -121,7 +125,8 @@
       if (this.data.checkItem === null) {
         this.data.checkItem = {
           group: group,
-          index: index
+          index: index,
+          element: this.$target
         };
         this.$target.classList.add('check');
       } else {
@@ -133,12 +138,21 @@
         }
 
         if (group == this.data.checkItem.group) {
+          new Audio("./static/resource/Button32.wav").play();
           owo.query("[group=\"" + group + "\"]").forEach(function (element) {
-            new Audio("./static/resource/Button32.wav").play();
             element.classList.add('clear');
             element.classList.remove('check');
             _this3.data.checkItem = null;
           });
+          this.checkClear();
+        } else {
+          this.data.checkItem.element.classList.remove('check');
+          this.data.checkItem = {
+            group: group,
+            index: index,
+            element: this.$target
+          };
+          this.$target.classList.add('check');
         }
       }
     },
@@ -155,6 +169,148 @@
     "next": function next() {
       this.data.showInfoProp = false;
       this.handleEvent();
+    },
+    "checkClear": function checkClear() {
+      var complete = true;
+      owo.query("[group]").forEach(function (element) {
+        if (!element.classList.contains('clear')) {
+          complete = false;
+        }
+      }); // 判断是否结束了
+
+      if (complete) {
+        this.data.isPlaying = false;
+        setTimeout(function () {
+          owo.id.prop1.style.display = 'block';
+        }, 0);
+      }
+    }
+  },
+  "page3": {
+    "data": {
+      "speedY": [],
+      "speedX": [],
+      "checkItem": null,
+      "showInfoProp": false,
+      "showNextProp": false,
+      "peopleName": "冯远",
+      "peopleInfo": [],
+      "isPlaying": true
+    },
+    "created": function created() {
+      var _this4 = this;
+
+      owo.query('.show-card').forEach(function (element) {
+        element.style.top = element.offsetTop - 1035 - 351 - autoScaleInfo.hideHeight - 40 + 'px';
+        setTimeout(function () {
+          element.style.transition = 'top 1s linear, left 1s linear';
+        }, 500);
+      });
+      setTimeout(function () {
+        _this4.drop();
+      }, 2000);
+    },
+    "drop": function drop() {
+      var _this5 = this;
+
+      if (!this.data.isPlaying) return;
+      var next = false;
+
+      for (var key in owo.query('.show-card')) {
+        if (owo.query('.show-card').hasOwnProperty(key)) {
+          if (!this.data.speedY[key]) this.data.speedY[key] = owo.tool.randomNum(0, 30);
+          this.data.speedX[key] = owo.tool.randomNum(-40, 40);
+          var element = owo.query('.show-card')[key]; // element.style.top = '1157px'
+
+          var topValue = element.offsetTop + autoScaleInfo.showHeight * 0.05 + this.data.speedY[key]; // 不能让它一直掉掉出屏幕
+
+          var maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20;
+          if (topValue > maxTop) topValue = maxTop;
+
+          if (topValue < maxTop) {
+            next = true;
+          } // 左右偏移
+
+
+          element.style.top = topValue + 'px';
+          if (topValue != maxTop) element.style.left = element.x + this.data.speedX[key] + 'px';
+        }
+      }
+
+      setTimeout(function () {
+        if (next) _this5.drop();else _this5.dropEnd();
+      }, 1000);
+    },
+    "checkItem": function checkItem() {
+      var _this6 = this;
+
+      var group = this.$target.getAttribute('group');
+      var index = this.$target.getAttribute('ind');
+      var info = this.$target.getAttribute('info');
+      new Audio("./static/resource/Button34.wav").play(); // 判断是否点击了同样的
+
+      if (this.data.checkItem === null) {
+        this.data.checkItem = {
+          group: group,
+          index: index,
+          element: this.$target
+        };
+        this.$target.classList.add('check');
+      } else {
+        if (index === this.data.checkItem.index) {
+          // this.$target.classList.remove('check')
+          // this.data.checkItem = null
+          this.showInfo(info);
+          return;
+        }
+
+        if (group == this.data.checkItem.group) {
+          new Audio("./static/resource/Button32.wav").play();
+          owo.query("[group=\"" + group + "\"]").forEach(function (element) {
+            element.classList.add('clear');
+            element.classList.remove('check');
+            _this6.data.checkItem = null;
+          });
+          this.checkClear();
+        } else {
+          this.data.checkItem.element.classList.remove('check');
+          this.data.checkItem = {
+            group: group,
+            index: index,
+            element: this.$target
+          };
+          this.$target.classList.add('check');
+        }
+      }
+    },
+    "showInfo": function showInfo(info) {
+      info = info.split('/');
+      owo.id.peopleName.innerText = info[0];
+      this.data.peopleInfo = info.slice(1);
+      this.data.showInfoProp = !this.data.showInfoProp;
+      this.handleEvent();
+    },
+    "dropEnd": function dropEnd() {
+      setTimeout(function () {}, 100);
+    },
+    "next": function next() {
+      this.data.showInfoProp = false;
+      this.handleEvent();
+    },
+    "checkClear": function checkClear() {
+      var complete = true;
+      owo.query("[group]").forEach(function (element) {
+        if (!element.classList.contains('clear')) {
+          complete = false;
+        }
+      }); // 判断是否结束了
+
+      if (complete) {
+        this.data.isPlaying = false;
+        setTimeout(function () {
+          owo.id.prop2.style.display = 'block';
+        }, 0);
+      }
     }
   }
 };</script>

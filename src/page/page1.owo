@@ -9,7 +9,7 @@
   //- 游戏介绍弹窗
   .game-prop(o-if="this.data.showProp")
     img.so-2(src="@|page1-1-2.png|")
-    img.so-3(src="@|page1-1-3.png|" go="page2///fade/moveFromRight/fade/moveFromLeft")
+    img.so-3(src="@|page1-1-3.png|" go="page2///fade/moveFromRight/true")
     img.so-4(src="@|page1-1-4.png|" o-tap="switchProp")
   
 </template>

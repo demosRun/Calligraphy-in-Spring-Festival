@@ -193,125 +193,132 @@ li {
   z-index: 2;
 }
 
-.page-2 .text-bg {
-  position: absolute;
-  left: 20px;
-  z-index: 1;
-  top: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
+.page-2 .complete-prop {
+  display: none;
 }
 
-.page-2 .so-3 {
+.page-2 .complete-prop .prop-so-2 {
   position: absolute;
-  left: -11px;
-  z-index: 3;
-  top: 725px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-}
-
-.page-2 .so-2 {
-  position: absolute;
-  left: 324px;
+  left: 66px;
   z-index: 2;
-  top: 570px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
+  top: 533px;
 }
 
-.page-2 .text {
-  position: absolute;
-  left: 104px;
-  z-index: 2;
-  top: 77px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.6s;
-  transition: opacity 0.3s, -webkit-transform 0.6s;
-  transition: transform 0.6s, opacity 0.3s;
-  transition: transform 0.6s, opacity 0.3s, -webkit-transform 0.6s;
-}
-
-.page-2 .show-card {
-  padding: 20px;
-  z-index: 99;
-}
-
-.page-2 .check {
-  background-image: url('../resource/check.png');
-  background-position: -2px -8px;
-  background-size: 400px;
-}
-
-.page-2 .clear .text {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  opacity: 0;
-}
-
-.page-2 .prop-box {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 100;
-}
-
-.page-2 .prop-box .text-box {
-  position: absolute;
-  left: 58px;
-  z-index: 2;
-  top: 490px;
-}
-
-.page-2 .prop-box .text-box ul {
-  font-family: STKaiti;
-  font-size: 32px;
-  line-height: 54px;
-  width: 400px;
-  top: 195px;
-  position: absolute;
-  left: 150px;
-}
-
-.page-2 .prop-box .text-box li {
-  background-image: url('../resource/doit.png');
-  background-repeat: no-repeat;
-  background-position: center left;
-  padding-left: 20px;
-}
-
-.page-2 .prop-box .name {
-  position: absolute;
-  top: 89px;
-  width: 100%;
-  font-size: 50px;
-  text-align: center;
-  line-height: 60px;
-  font-family: STKaiti;
-  font-weight: bold;
-}
-
-.page-2 .prop-box .next {
+.page-2 .complete-prop .prop-so-3 {
   position: absolute;
   left: 203px;
   z-index: 3;
   top: 1002px;
+}
+.page-3 {
+  background-image: url('../resource/page2.jpg');
+}
+
+.page-3 .so-9 {
+  position: absolute;
+  left: 452px;
+  top: 614px;
+  width: 281px;
+  height: 282px;
+  z-index: 9;
+}
+
+.page-3 .so-8 {
+  position: absolute;
+  left: 422px;
+  top: 174px;
+  width: 281px;
+  height: 281px;
+  z-index: 8;
+}
+
+.page-3 .so-7 {
+  position: absolute;
+  left: 81px;
+  top: 95px;
+  width: 282px;
+  height: 285px;
+  z-index: 7;
+}
+
+.page-3 .so-6 {
+  position: absolute;
+  left: 442px;
+  top: 1035px;
+  width: 282px;
+  height: 281px;
+  z-index: 6;
+}
+
+.page-3 .so-5 {
+  position: absolute;
+  left: 253px;
+  top: 817px;
+  width: 281px;
+  height: 282px;
+  z-index: 5;
+}
+
+.page-3 .so-4 {
+  position: absolute;
+  left: 11px;
+  top: 566px;
+  width: 281px;
+  height: 281px;
+  z-index: 4;
+}
+
+.page-3 .so-3 {
+  position: absolute;
+  left: 22px;
+  top: 953px;
+  width: 282px;
+  height: 285px;
+  z-index: 3;
+}
+
+.page-3 .so-2 {
+  position: absolute;
+  left: 216px;
+  top: 372px;
+  width: 282px;
+  height: 281px;
+  z-index: 2;
+}
+
+.page-3 .complete-prop {
+  display: none;
+}
+
+.page-3 .complete-prop .prop-so-2 {
+  position: absolute;
+  left: 66px;
+  z-index: 2;
+  top: 533px;
+}
+
+.page-3 .complete-prop .prop-so-3 {
+  position: absolute;
+  left: 203px;
+  z-index: 3;
+  top: 896px;
+}
+
+.page-3 .text-bg {
+  width: 282px;
+  height: 282px;
+}
+
+.page-3 .text {
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 65px;
+}
+
+.page-3 .check {
+  background-position: -6px -8px;
+  background-size: 335px;
 }
 /* 页面切换动画 */
 .o-page-fade {
@@ -344,21 +351,7 @@ li {
 @keyframes moveFromRight {
 	from { transform: translateX(100%); }
 }
-.o-page-moveFromLeft {
-	-webkit-animation: moveFromLeft .6s ease both;
-	-moz-animation: moveFromLeft .6s ease both;
-	animation: moveFromLeft .6s ease both;
-}
 
-@-webkit-keyframes moveFromLeft {
-	from { -webkit-transform: translateX(-100%); }
-}
-@-moz-keyframes moveFromLeft {
-	from { -moz-transform: translateX(-100%); }
-}
-@keyframes moveFromLeft {
-	from { transform: translateX(-100%); }
-}
 
 /* 动画效果 */
 @keyframes fadeInRight {
