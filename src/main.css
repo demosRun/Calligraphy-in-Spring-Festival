@@ -99,10 +99,11 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   background-position: -2px -8px;
   background-size: 400px;
 }
-.clear {
+.page .clear {
   user-select: none;
   pointer-events: none;
   opacity: 0.9;
+  z-index: 0;
 }
 .clear .text {
   transform: scale(0);
@@ -137,4 +138,9 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 
 .scale-box {
   background-image: url('@|page2.jpg|');
+}
+
+.no-touch {
+  pointer-events: none;
+  user-select: none;
 }

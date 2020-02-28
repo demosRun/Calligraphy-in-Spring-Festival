@@ -1,0 +1,78 @@
+<template lang="pug">
+.music-menu
+  img.music-icon(src="@|music.png|" o-tap="switchPlay")
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      music: null,
+      musicIsPlay: false
+    },
+    switchPlay: function () {
+      (this.data.musicIsPlay) ? this.pause() : this.play()
+    },
+    play: function () {
+      console.log('播放音乐')
+      if (!this.data.musicIsPlay) {
+        this.data.musicIsPlay = true
+        this.data.music = new Audio("@|bg.mp3|")
+        this.data.music.volume = 0.2
+        this.data.music.loop = true
+        this.data.music.play()
+        const icon = document.getElementsByClassName('music-icon')[0]
+        icon.src = '@|music.png|'
+        icon.classList.add('active')
+      }
+    },
+    pause: function () {
+      if (this.data.musicIsPlay) {
+        this.data.musicIsPlay = false
+        this.data.music.pause()
+        const icon = document.getElementsByClassName('music-icon')[0]
+        icon.src = '@|music.png|'
+        icon.classList.remove('active')
+      }
+    }
+  }
+</script>
+
+
+<style lang="less">
+.music-menu {
+  position: absolute;
+  right: 10px;
+  top: 10%;
+  z-index: 9;
+  width: 67px;
+  height: 67px;
+}
+.music-icon {
+  width: 67px;
+  height: 67px;
+}
+.active {
+  animation: musicturn 12s linear infinite;
+}
+@keyframes musicturn {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+</style>

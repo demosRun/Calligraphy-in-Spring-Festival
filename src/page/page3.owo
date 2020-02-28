@@ -45,9 +45,9 @@
     },
     created: function () {
       owo.query('.show-card').forEach(element => {
-        element.style.top = (element.offsetTop - 1035 - 351 - autoScaleInfo.hideHeight) - 40 + 'px'
+        element.style.top = (element.offsetTop - 1035 - 282 - autoScaleInfo.hideHeight) - 40 + 'px'
         setTimeout(() => {
-          element.style.transition = 'top 1s linear, left 1s linear';
+          element.style.transition = 'top 0.5s linear, left 0.5s linear';
         }, 500);
         
       })
@@ -64,10 +64,21 @@
           this.data.speedX[key] = owo.tool.randomNum(-40, 40)
           const element = owo.query('.show-card')[key];
           // element.style.top = '1157px'
-          let topValue = element.offsetTop + autoScaleInfo.showHeight * 0.05 + this.data.speedY[key]
+          let topValue = element.offsetTop + (autoScaleInfo.showHeight + this.data.speedY[key]) * 0.05
           // 不能让它一直掉掉出屏幕
-          const maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20
-          if (topValue > maxTop) topValue = maxTop
+          const maxTop = 1508 - 281 + autoScaleInfo.hideHeight - 20
+          if (topValue > maxTop) {
+            // 前两关掉在地上就算失败
+            topValue = maxTop
+            if (!element.classList.contains('clear')) {
+              next = false
+              setTimeout(() => {
+                this.dropEnd()
+              }, 100)
+              element.classList.add('no-touch')
+              return
+            }
+          }
           if (topValue < maxTop) {
             next = true
           }
@@ -77,9 +88,11 @@
         }
       }
       setTimeout(() => {
-        if (next) this.drop()
-        else this.dropEnd()
-      }, 1000);
+        if(!owo.state.gameSuspend) {
+          if (next) this.drop()
+          else this.dropEnd()
+        }
+      }, 500);
     },
     checkItem: function () {
       const group = this.$target.getAttribute('group')
@@ -150,7 +163,7 @@
 
 <style lang="less">
 .so-9 {position: absolute; left: 452px; top: 614px; width: 281px; height: 282px; z-index: 9;}
-.so-8 {position: absolute; left: 422px; top: 174px; width: 281px; height: 281px; z-index: 8;}
+.so-8 {position: absolute; left: 122px; top: 544px; width: 281px; height: 281px; z-index: 8;}
 .so-7 {position: absolute; left: 81px; top: 95px; width: 282px; height: 285px; z-index: 7;}
 .so-6 {position: absolute; left: 442px; top: 1035px; width: 282px; height: 281px; z-index: 6;}
 .so-5 {position: absolute; left: 253px; top: 817px; width: 281px; height: 282px; z-index: 5;}

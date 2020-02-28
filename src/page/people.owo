@@ -14,6 +14,7 @@ module.exports = {
     peopleInfo:[]
   },
   showInfo: function(info) {
+    owo.state.gameSuspend = true
     info = info.split('/')
     owo.id.peopleName.innerText = info[0]
     this.data.peopleInfo = info.slice(1)
@@ -23,6 +24,8 @@ module.exports = {
   close: function () {
     this.data.showInfoProp = false
     this.handleEvent()
+    owo.state.gameSuspend = false
+    if (owo.script[owo.activePage].drop()) owo.script[owo.activePage].drop()
   }
 }
 </script>

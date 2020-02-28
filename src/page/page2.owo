@@ -33,9 +33,9 @@
     },
     created: function () {
       owo.query('.show-card').forEach(element => {
-        element.style.top = (element.offsetTop - 857 - 282 - autoScaleInfo.hideHeight) - 40 + 'px'
+        element.style.top = (element.offsetTop - 857 - 351 - autoScaleInfo.hideHeight) - 40 + 'px'
         setTimeout(() => {
-          element.style.transition = 'top 1s linear, left 1s linear';
+          element.style.transition = 'top 0.2s linear, left 0.2s linear';
         }, 500);
         
       })
@@ -52,10 +52,20 @@
           this.data.speedX[key] = owo.tool.randomNum(-40, 40)
           const element = owo.query('.show-card')[key];
           // element.style.top = '1157px'
-          let topValue = element.offsetTop + autoScaleInfo.showHeight * 0.2 + this.data.speedY[key]
+          let topValue = element.offsetTop + (autoScaleInfo.showHeight + this.data.speedY[key]) * 0.06
           // 不能让它一直掉掉出屏幕
-          const maxTop = 1508 - 282 + autoScaleInfo.hideHeight - 20
-          if (topValue > maxTop) topValue = maxTop
+          const maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20
+          if (topValue > maxTop) {
+            // 前两关掉在地上就算失败
+            topValue = maxTop
+            if (!element.classList.contains('clear')) {
+              element.classList.add('no-touch')
+              setTimeout(() => {
+                this.dropEnd()
+              }, 100)
+              return
+            }
+          }
           if (topValue < maxTop) {
             next = true
           }
@@ -65,9 +75,11 @@
         }
       }
       setTimeout(() => {
-        if (next) this.drop()
-        else this.dropEnd()
-      }, 1000);
+        if(!owo.state.gameSuspend) {
+          if (next) this.drop()
+          else this.dropEnd()
+        }
+      }, 200);
     },
     checkItem: function () {
       const group = this.$target.getAttribute('group')

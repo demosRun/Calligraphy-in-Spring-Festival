@@ -1,12 +1,63 @@
 <template lang="pug">
-.box
+.share
+  img.so-4(src="@|share-4.png|" o-tap="owo.script.sharePage.showShare()")
+  img.so-3(src="@|share-3.png|" o-tap="location.replace('')")
+  img.so-2(src="@|share-2.png|" o-tap="location.replace('http://art.people.com.cn/GB/206322/431553/index.html')")
+  .use-time 不可思议
+  .code 12340名
 </template>
 <script>
 module.exports = {
-  data: {
-    "sd": "sd"
+  show: function () {
+    const useTime = (Date.parse(new Date()) - owo.state.start) / 1000
+    if (useTime > 20) {
+      owo.query('.use-time')[0].innerText = `${parseInt(useTime / 60)} 分 ${useTime % 60} 秒`
+    }
+    
   }
 }
 </script>
 <style lang="less">
+.share {
+  z-index: 3;
+  background-image: url('@|share-bg.jpg|')
+}
+.so-4 {
+  position: absolute;
+  left: 165px;
+  z-index: 4;
+  top: 795px
+}
+.so-3 {
+  position: absolute;
+  left: 165px;
+  z-index: 3;
+  top: 919px
+}
+.so-2 {
+  position: absolute;
+  left: 165px;
+  z-index: 2;
+  top: 1042px
+}
+.use-time {
+  position: absolute;
+  left: 421px;
+  top: 601px;
+  color: #ba3a3b;
+  font-size: 35px;
+  line-height: 60px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+.code {
+  position: absolute;
+  left: 421px;
+  top: 682px;
+  color: #ba3a3b;
+  font-size: 35px;
+  line-height: 60px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
 </style>

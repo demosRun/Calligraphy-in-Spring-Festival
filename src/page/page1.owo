@@ -7,28 +7,40 @@
   img.so-6#yanzi(src="@|start-6.png|")
   img.so-7(src="@|start-7.png|")
   //- 游戏介绍弹窗
-  .game-prop(o-if="this.data.showProp")
+  .game-prop
     img.so-2(src="@|page1-1-2.png|")
-    img.so-3(src="@|page1-1-3.png|" go="page2///fade/moveFromRight/true")
+    img.so-3(src="@|page1-1-3.png|" o-tap="start")
     img.so-4(src="@|page1-1-4.png|" o-tap="switchProp")
   
 </template>
 
 <script>
   module.exports = {
-    data: {
-      showProp: false
-    },
     created: function () {
-      console.log(this)
       owo.tool.animate('fadeInRight', owo.id.meihua, 500)
       owo.tool.animate('fadeIn', owo.id.mainText, 800)
       owo.tool.animate('fadeInRightBig', owo.id.yanzi, 800)
       owo.tool.animate('fadeIn', owo.id.huaban, 1600)
     },
     switchProp: function () {
-      this.data.showProp = !this.data.showProp
-      this.handleEvent()
+      const showProp = owo.query('.game-prop')[0]
+      if (showProp.style.top == '0%') {
+        showProp.style.top = '-100%'
+      } else {
+        showProp.style.top = '0%'
+      }
+    },
+    start: function () {
+      owo.go({
+        page: 'page2',
+        ani: "fade/moveFromRight",
+        noBack: true,
+      })
+      // 计时开始
+      owo.script.playMusic.play()
+      setTimeout(() => {
+        owo.state.start = Date.parse(new Date())
+      }, 0)
     }
   }
 </script>
@@ -36,7 +48,7 @@
 
 <style lang="less">
 .page-1 {
-  z-index: 2;
+  z-index: 100;
   background-image: url('@|page1.jpg|');
 }
 .so-2 {
@@ -78,11 +90,12 @@
 .game-prop {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  transition: top 0.5s;
   .so-2 {
     position: absolute;
     left: 86px;

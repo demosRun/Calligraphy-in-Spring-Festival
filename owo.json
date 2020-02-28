@@ -95,6 +95,11 @@
 	],
 	"pageList": [
 		{
+			"name": "loading",
+			"src": "/src/page/loading.owo",
+			"type": "page"
+		},
+		{
 			"name": "page1",
 			"src": "./src/page/page1.owo",
 			"type": "page"
@@ -132,6 +137,16 @@
 		{
 			"name": "flower",
 			"src": "/src/page/flower.owo",
+			"type": "block"
+		},
+		{
+			"name": "playMusic",
+			"src": "/src/page/playMusic.owo",
+			"type": "block"
+		},
+		{
+			"name": "sharePage",
+			"src": "/src/page/sharePage.owo",
 			"type": "block"
 		}
 	],

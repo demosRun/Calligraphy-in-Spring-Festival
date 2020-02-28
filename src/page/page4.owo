@@ -87,7 +87,7 @@
   //- 过关显示框
   .prop-box.complete-prop#prop3
     img.so-2(src="@|prop-4-2.png|")
-    img.so-3(src="@|prop-4-3.png|")
+    img.so-3(src="@|prop-4-3.png|" go="share///fade/moveFromRight/true")
 </template>
 
 <script>
@@ -102,42 +102,23 @@
       isPlaying: true
     },
     created: function () {
-      owo.query('.show-card').forEach(element => {
-        element.style.top = (element.offsetTop - 1035 - 351 - autoScaleInfo.hideHeight) - 40 + 'px'
-        setTimeout(() => {
-          element.style.transition = 'top 1s linear, left 1s linear';
-        }, 500);
-        
-      })
-      setTimeout(() => {
-        this.drop()
-      }, 2000);
-    },
-    drop: function () {
-      if (!this.data.isPlaying) return
-      let next = false
-      for (const key in owo.query('.show-card')) {
-        if (owo.query('.show-card').hasOwnProperty(key)) {
-          if (!this.data.speedY[key]) this.data.speedY[key] = owo.tool.randomNum(0, 30)
-          this.data.speedX[key] = owo.tool.randomNum(-40, 40)
-          const element = owo.query('.show-card')[key];
-          // element.style.top = '1157px'
-          let topValue = element.offsetTop + autoScaleInfo.showHeight * 0.05 + this.data.speedY[key]
-          // 不能让它一直掉掉出屏幕
-          const maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20
-          if (topValue > maxTop) topValue = maxTop
-          if (topValue < maxTop) {
-            next = true
-          }
-          // 左右偏移
-          element.style.top = topValue + 'px'
-          if(topValue != maxTop) element.style.left = element.x + this.data.speedX[key] + 'px'
-        }
+      let item = 0
+      let topValue = 140
+      const cardList = owo.query('.show-card')
+      let setList = []
+      while (setList.length < cardList.length) {
+        let tempNum = owo.tool.randomNum(0, cardList.length - 1)
+        if (!setList.includes(tempNum)) setList.push(tempNum)
       }
-      setTimeout(() => {
-        if (next) this.drop()
-        else this.dropEnd()
-      }, 1000);
+      
+      for (let index = 0; index < setList.length; index++) {
+        const element = cardList[setList[index]];
+        setTimeout(() => {
+          element.style.top = topValue + (parseInt(index / 4) * 170) + 'px'
+          element.style.left = 0 + ((index % 4) * 185) + 'px'
+          element.style.opacity = '1'
+        }, index * 100);
+      }
     },
     checkItem: function () {
       const group = this.$target.getAttribute('group')
@@ -205,135 +186,32 @@
 <style lang="less">
 .show-card {
   position: absolute;
-  width: 282px;
-  height: 282px;
-}
-.item-1 {
-  left: 0%;
-  top: 40%;
-}
-.item-2 {
-  left: 0%;
-  top: 20%;
-}
-.item-3 {
-  left: 22%;
-  top: 54%;
-}
-.item-4 {
-  left: 30%;
-  top: 30%;
-}
-.item-5 {
-  left: 60%;
-  top: 64%;
-}
-.item-6 {
-  left: 10%;
-  top: 30%;
-}
-.item-7 {
-  left: 70%;
-  top: 14%;
-}
-.item-8 {
-  left: 20%;
-  top: -10%;
-}
-.item-9 {
-  left: 5%;
-  top: -67%;
-}
-.item-10 {
-  left: 27%;
-  top: -46%;
-}
-.item-11 {
-  left: 55%;
-  top: -28%;
-}
-.item-12 {
-  left: 4%;
-  top: -30%;
-}
-.item-13 {
-  left: 20%;
-  top: -52%;
-}
-.item-14 {
-  left: 15%;
-  top: -68%;
-}
-.item-15 {
-  left: 60%;
-  top: -82%;
-}
-.item-16 {
-  left: 30%;
-  top: -104%;
-}
-.item-17 {
-  left: 10%;
-  top: -126%;
-}
-.item-18 {
-  left: 54%;
-  top: -148%;
-}
-.item-19 {
-  left: 72%;
-  top: -167%;
-}
-.item-20 {
-  left: 22%;
-  top: -151%;
-}
-.item-21 {
-  left: 14%;
-  top: -195%;
-}
-.item-22 {
-  left: 40%;
-  top: -218%;
-}
-.item-23 {
-  left: 33%;
-  top: -220%;
-}
-.item-24 {
-  left: 2%;
-  top: -221%;
-}
-.item-25 {
-  left: 54%;
-  top: -259%;
-}
-.item-26 {
-  left: 0%;
-  top: -263%;
-}
-.item-27 {
-  left: 65%;
-  top: -245%;
-}
-.item-28 {
-  left: 15%;
-  top: -247%;
+  width: 165px;
+  height: 165px;
+  left: 300px;
+  top: 645px;
+  opacity: 0;
+  transition: top 0.4s linear, left 0.4s linear, opacity 0.4s linear;
 }
 .text-bg {
-  width: 282px;
-  height: 282px;
+  width: 165px;
+  height: 165px;
+  left: 10px;
+  top: 10px;
 }
 .text {
   left: 0;
   right: 0;
   margin: auto;
-  top: 65px;
+  top: 41px;
+  height: 66%;
 }
 .check {
-  background-size: 330px;
+  background-size: 192px;
+  background-position: -2px -4px;
 }
 .prop-box  {
+  display: none;
   .so-2 {
     position: absolute;
     left: 66px;
@@ -346,5 +224,8 @@
     z-index: 3;
     top: 1002px
   }
+}
+.show-card {
+  padding: 10px;
 }
 </style>

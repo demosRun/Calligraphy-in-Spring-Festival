@@ -1,0 +1,169 @@
+<template lang="pug">
+.loading-box
+  img.loading(src="@|loading-clould.png|")
+  img.loading-2(src="@|loading-ani.png|")
+  .num 0%
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      imgList: [
+        '@|check.png|',
+        '@|doit.png|',
+        '@|loading-ani.png|',
+        '@|music.png|',
+        '@|page1.jpg|',
+        '@|page1-1-2.png|',
+        '@|page1-1-3.png|',
+        '@|page1-1-4.png|',
+        '@|page1-2.png|',
+        '@|page1-2-2.png|',
+        '@|page1-4-2.png|',
+        '@|page2-1-2.png|',
+        '@|page2-1-3.png|',
+        '@|page3-2-2.png|',
+        '@|page3-3-2.png|',
+        '@|page3-4-2.png|',
+        '@|page3-5-2.png|',
+        '@|page4-1.png|',
+        '@|page4-2.png|',
+        '@|page4-3.png|',
+        '@|page4-4.png|',
+        '@|page4-5.png|',
+        '@|page4-6.png|',
+        '@|page4-7.png|',
+        '@|page4-8.png|',
+        '@|page4-9.png|',
+        '@|page4-10.png|',
+        '@|page4-11.png|',
+        '@|page4-12.png|',
+        '@|page4-13.png|',
+        '@|page4-14.png|',
+        '@|prop-1-2.png|',
+        '@|prop-1-3.png|',
+        '@|prop-2-2.png|',
+        '@|prop-3-2.png|',
+        '@|prop-3-3.png|',
+        '@|prop-4-2.png|',
+        '@|prop-4-3.png|',
+        '@|share-2.png|',
+        '@|share-3.png|',
+        '@|share-4.png|',
+        '@|start-2.png|',
+        '@|start-3.png|',
+        '@|start-4.png|',
+        '@|start-5.png|',
+        '@|start-6.png|',
+        '@|start-7.png|',
+      ]
+    },
+    show: function () {
+      const mum = owo.query('.num')[0]
+      this.preloadImages(this.data.imgList, (e) => {
+        setTimeout(() => {
+          owo.go({noBack: true,page: "page1"})
+        }, 500)
+      }, (num) => {
+        mum.innerHTML = num + '%'
+      })
+    },
+    preloadImage: function (src, successFn) {
+      var image = new Image()
+      image.src = src
+      image.onload = function () {
+        successFn && successFn(src)
+      }
+      image.onerror = function (error) {
+        successFn && successFn(src)
+      }
+    },
+    preloadImages: function (srcs, doneFn, progressFn) {
+      if (!Array.isArray(srcs)) {
+        console.log('第一个参数只能是一个数组')
+      } else {
+        var allCount = srcs.length
+        var doneCount = 0
+        srcs.forEach((srcItem) => {
+          this.preloadImage(srcItem, function () {
+            doneCount++
+            progressFn && progressFn(Math.ceil(100 * doneCount / allCount))
+            if (doneCount === allCount) {
+              doneFn && doneFn()
+            }
+          })
+        })
+      }
+    }
+  }
+</script>
+
+
+<style lang="less">
+.loading-box {
+  background-image: url('@|loading-bg.png|');
+  background-color: #fbe0e8;
+  z-index: 10;
+}
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -16%;
+  bottom: 0;
+  margin: auto;
+}
+.num {
+  position: absolute;
+  font-size: 34px;
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+  top: 53%;
+  font-weight: bold;
+}
+.loading-2 {
+  position: absolute;
+  left: -7%;
+  right: 0;
+  top: -19%;
+  bottom: 0;
+  margin: auto;
+}
+@keyframes float{
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(5px) translateY(5px);
+  }
+  100% {
+    transform: rotate(xx) translateX(0px) translateY(0px);
+  }
+}
+
+.loading {
+  animation: float 3s infinite 0s linear;
+}
+@keyframes float2 {
+  0%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(-6px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(6px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.loading-2 {
+    animation: float2 3s infinite 0s linear;
+}
+</style>
