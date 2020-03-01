@@ -119,6 +119,7 @@
           element.style.opacity = '1'
         }, index * 100);
       }
+      owo.script.clock.start()
     },
     checkItem: function () {
       const group = this.$target.getAttribute('group')
@@ -174,6 +175,7 @@
       // 判断是否结束了
       if (complete) {
         this.data.isPlaying = false
+        owo.script.clock.pause()
         setTimeout(() => {
           owo.id.prop3.style.display = 'block'
         }, 0)

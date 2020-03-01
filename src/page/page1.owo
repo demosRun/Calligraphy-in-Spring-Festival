@@ -38,9 +38,7 @@
       })
       // 计时开始
       owo.script.playMusic.play()
-      setTimeout(() => {
-        owo.state.start = Date.parse(new Date())
-      }, 0)
+      owo.script.clock.start()
     }
   }
 </script>

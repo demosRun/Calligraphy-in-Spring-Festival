@@ -9,6 +9,7 @@
   module.exports = {
     data: {
       imgList: [
+        '@|loading-bg.png|',
         '@|check.png|',
         '@|doit.png|',
         '@|loading-ani.png|',
@@ -63,7 +64,7 @@
       this.preloadImages(this.data.imgList, (e) => {
         setTimeout(() => {
           owo.go({noBack: true,page: "page1"})
-        }, 500)
+        }, 800)
       }, (num) => {
         mum.innerHTML = num + '%'
       })

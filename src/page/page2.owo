@@ -40,6 +40,7 @@
         
       })
       setTimeout(() => {
+        owo.script.clock.start()
         this.drop()
       }, 2000);
     },
@@ -121,6 +122,7 @@
       }
     },
     dropEnd: function () {
+      if (owo.activePage !== 'page2' || !this.data.isPlaying) return
       setTimeout(() => {
         owo.script.fail.showProp()
       }, 100);
@@ -139,6 +141,7 @@
       // 判断是否结束了
       if (complete) {
         this.data.isPlaying = false
+        owo.script.clock.pause()
         setTimeout(() => {
           owo.id.prop1.style.display = 'block'
         }, 0)

@@ -3,13 +3,13 @@
   img.so-4(src="@|share-4.png|" o-tap="owo.script.sharePage.showShare()")
   img.so-3(src="@|share-3.png|" o-tap="location.replace('')")
   img.so-2(src="@|share-2.png|" o-tap="location.replace('http://art.people.com.cn/GB/206322/431553/index.html')")
-  .use-time 不可思议
+  .use-time 数据错误
   .code 12340名
 </template>
 <script>
 module.exports = {
   show: function () {
-    const useTime = (Date.parse(new Date()) - owo.state.start) / 1000
+    const useTime = owo.script.clock.data.time
     if (useTime > 20) {
       owo.query('.use-time')[0].innerText = `${parseInt(useTime / 60)} 分 ${useTime % 60} 秒`
     }
@@ -19,7 +19,7 @@ module.exports = {
 </script>
 <style lang="less">
 .share {
-  z-index: 3;
+  z-index: 99;
   background-image: url('@|share-bg.jpg|')
 }
 .so-4 {

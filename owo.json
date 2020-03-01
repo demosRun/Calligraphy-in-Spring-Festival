@@ -148,6 +148,11 @@
 			"name": "sharePage",
 			"src": "/src/page/sharePage.owo",
 			"type": "block"
+		},
+		{
+			"name": "clock",
+			"src": "/src/page/clock.owo",
+			"type": "block"
 		}
 	],
 	"mode": {

@@ -480,7 +480,7 @@ li {
   padding: 10px;
 }
 .share {
-  z-index: 3;
+  z-index: 99;
   background-image: url('../resource/share-bg.jpg');
 }
 
@@ -662,6 +662,21 @@ li {
   top: 5%;
   right: 0;
   width: 67%;
+}
+.timer {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 5%;
+  top: 11%;
+  width: 120px;
+  z-index: 9;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 48px;
+  text-align: center;
 }
 /* 页面切换动画 */
 .o-page-fade {

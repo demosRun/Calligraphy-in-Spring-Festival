@@ -1,0 +1,45 @@
+<template lang="pug">
+.timer#timerItem 00:00
+</template>
+
+<script>
+module.exports = {
+  data: {
+    time: 0,
+    clockItem: null
+  },
+  start: function () {
+    if (this.data.clockItem) return
+    this.data.clockItem = setInterval(() => {
+      this.data.time += 1
+      let minute = parseInt(this.data.time / 60)
+      let second = parseInt(this.data.time % 60)
+      if (minute < 10) minute = '0' + minute
+      if (second < 10) second = '0' + second
+      owo.id.timerItem.innerText = `${minute}:${second}`
+    }, 1000)
+  },
+  pause: function () {
+    window.clearInterval(this.data.clockItem)
+    this.data.clockItem = null
+  }
+}
+</script>
+
+<style lang="less">
+.timer {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 5%;
+  top: 11%;
+  width: 120px;
+  z-index: 9;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 48px;
+  text-align: center;
+}
+</style>
