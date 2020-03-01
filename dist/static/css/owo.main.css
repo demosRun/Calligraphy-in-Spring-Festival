@@ -210,9 +210,11 @@ li {
 
 .page-1 .so-5 {
   position: absolute;
-  left: 271px;
+  left: 0;
+  right: 0;
   z-index: 5;
-  top: 919px;
+  top: 1060px;
+  margin: auto;
 }
 
 .page-1 .so-6 {
@@ -267,6 +269,13 @@ li {
   left: 342px;
   z-index: 4;
   top: 1205px;
+}
+
+.page-1 .yanzi {
+  position: absolute;
+  right: 0;
+  width: 147%;
+  top: 20%;
 }
 .page-2 .so-4-1 {
   position: absolute;

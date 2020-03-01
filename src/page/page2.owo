@@ -27,9 +27,10 @@
       checkItem: null,
       showInfoProp: false,
       showNextProp: false,
-      peopleName: '冯远',
       peopleInfo: [],
-      isPlaying: true
+      isPlaying: true,
+      checkMusic: null,
+      okMusic: null
     },
     created: function () {
       owo.query('.show-card').forEach(element => {
@@ -43,6 +44,10 @@
         owo.script.clock.start()
         this.drop()
       }, 2000);
+      this.data.checkMusic =  new Audio("@|Button34.wav|")
+      this.data.okMusic = new Audio("@|Button32.wav|")
+      this.data.checkMusic.volume = 0.5
+      this.data.okMusic.volume = 0.5
     },
     drop: function () {
       if (!this.data.isPlaying) return
@@ -86,9 +91,10 @@
       const group = this.$target.getAttribute('group')
       const index = this.$target.getAttribute('ind')
       const info = this.$target.getAttribute('info')
-      new Audio("@|Button34.wav|").play()
+      
       // 判断是否点击了同样的
       if (this.data.checkItem === null) {
+        if (this.data.checkMusic) this.data.checkMusic.play()
         this.data.checkItem = {
           group,
           index,
@@ -97,13 +103,14 @@
         this.$target.classList.add('check')
       } else {
         if (index === this.data.checkItem.index) {
+          if (this.data.checkMusic) this.data.checkMusic.play()
           // this.$target.classList.remove('check')
           // this.data.checkItem = null
           owo.script.people.showInfo(info)
           return
         }
         if (group == this.data.checkItem.group) {
-          new Audio("@|Button32.wav|").play()
+          if (this.data.okMusic) this.data.okMusic.play()
           owo.query(`[group="${group}"]`).forEach(element => {
             element.classList.add('clear')
             element.classList.remove('check')

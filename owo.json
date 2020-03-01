@@ -84,6 +84,13 @@
 		{
 			"name": "autoScale.js",
 			"src": "./owo_modules/autoScale.js"
+		},
+		{
+			"name": "needLandscape",
+			"src": "./owo_modules/needLandscape.js",
+			"resource": false,
+			"babel": false,
+			"defer": false
 		}
 	],
 	"styleList": [

@@ -3,7 +3,7 @@
   img.so-2#meihua(src="@|start-2.png|")
   img.so-3#huaban(src="@|start-3.png|")
   img.so-4#mainText(src="@|start-4.png|")
-  img.so-5#yinzhang(src="@|start-5.png|" o-animation="shrink" o-tap="switchProp")
+  img.so-5#yinzhang(src="@|start.png|" o-animation="shrink" o-tap="switchProp")
   img.so-6#yanzi(src="@|start-6.png|")
   img.so-7(src="@|start-7.png|")
   //- 游戏介绍弹窗
@@ -63,9 +63,11 @@
 }
 .so-5 {
   position: absolute;
-  left: 271px;
+  left: 0;
+  right: 0;
   z-index: 5;
-  top: 919px
+  top: 1060px;
+  margin: auto;
 }
 .so-6 {
   position: absolute;
@@ -112,5 +114,11 @@
     z-index: 4;
     top: 1205px
   }
+}
+.yanzi {
+  position: absolute;
+  right: 0;
+  width: 147%;
+  top: 20%;
 }
 </style>

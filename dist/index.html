@@ -43,7 +43,7 @@
       <img class="so-2" id="meihua" src="./static/resource/start-2.png">
       <img class="so-3" id="huaban" src="./static/resource/start-3.png">
       <img class="so-4" id="mainText" src="./static/resource/start-4.png">
-      <img class="so-5 owo-animation-shrink" id="yinzhang" src="./static/resource/start-5.png" o-animation="shrink" o-tap="switchProp">
+      <img class="so-5 owo-animation-shrink" id="yinzhang" src="./static/resource/start.png" o-animation="shrink" o-tap="switchProp">
       <img class="so-6" id="yanzi" src="./static/resource/start-6.png">
       <img class="so-7" src="./static/resource/start-7.png">
       <div class="game-prop">
@@ -277,6 +277,7 @@
   <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
   <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
   <script src="./static/js/autoScale.js.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/needLandscape.js" type="text/javascript" charset="UTF-8"></script>
   <!-- 框架script文件 -->
   <script src="./static/js/owo.main.js" type="text/javascript" charset="UTF-8"></script>
   <script>
@@ -365,9 +366,10 @@
           "checkItem": null,
           "showInfoProp": false,
           "showNextProp": false,
-          "peopleName": "冯远",
           "peopleInfo": [],
-          "isPlaying": true
+          "isPlaying": true,
+          "checkMusic": null,
+          "okMusic": null
         },
         "created": function created() {
           var _this2 = this;
@@ -383,6 +385,10 @@
 
             _this2.drop();
           }, 2000);
+          this.data.checkMusic = new Audio("./static/resource/Button34.wav");
+          this.data.okMusic = new Audio("./static/resource/Button32.wav");
+          this.data.checkMusic.volume = 0.5;
+          this.data.okMusic.volume = 0.5;
         },
         "drop": function drop() {
           var _this3 = this;
@@ -435,10 +441,10 @@
 
           var group = this.$target.getAttribute('group');
           var index = this.$target.getAttribute('ind');
-          var info = this.$target.getAttribute('info');
-          new Audio("./static/resource/Button34.wav").play(); // 判断是否点击了同样的
+          var info = this.$target.getAttribute('info'); // 判断是否点击了同样的
 
           if (this.data.checkItem === null) {
+            if (this.data.checkMusic) this.data.checkMusic.play();
             this.data.checkItem = {
               group: group,
               index: index,
@@ -447,14 +453,15 @@
             this.$target.classList.add('check');
           } else {
             if (index === this.data.checkItem.index) {
-              // this.$target.classList.remove('check')
+              if (this.data.checkMusic) this.data.checkMusic.play(); // this.$target.classList.remove('check')
               // this.data.checkItem = null
+
               owo.script.people.showInfo(info);
               return;
             }
 
             if (group == this.data.checkItem.group) {
-              new Audio("./static/resource/Button32.wav").play();
+              if (this.data.okMusic) this.data.okMusic.play();
               owo.query("[group=\"" + group + "\"]").forEach(function(element) {
                 element.classList.add('clear');
                 element.classList.remove('check');
