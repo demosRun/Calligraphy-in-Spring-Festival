@@ -58,7 +58,7 @@
           this.data.speedX[key] = owo.tool.randomNum(-40, 40)
           const element = owo.query('.show-card')[key];
           // element.style.top = '1157px'
-          let topValue = element.offsetTop + (autoScaleInfo.showHeight + this.data.speedY[key]) * 0.06
+          let topValue = element.offsetTop + (autoScaleInfo.showHeight + this.data.speedY[key]) * 0.05
           // 不能让它一直掉掉出屏幕
           const maxTop = 1508 - 351 + autoScaleInfo.hideHeight - 20
           if (topValue > maxTop) {
