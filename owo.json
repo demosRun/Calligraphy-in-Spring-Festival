@@ -74,7 +74,7 @@
 	"scriptList": [
 		{
 			"name": "jquery1.11.0",
-			"src": "http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js"
+			"src": "./src/resource/jquery-1.11.1.min.js"
 		},
 		{
 			"name": "main",
@@ -199,7 +199,7 @@
 				"merge": false,
 				"allAnimate": false
 			},
-			"startAtHome": true
+			"startAtHome": false
 		}
 	},
 	"container": "scale-box"

@@ -4,16 +4,22 @@
   img.so-3(src="@|share-3.png|" o-tap="location.replace('')")
   img.so-2(src="@|share-2.png|" o-tap="location.replace('http://art.people.com.cn/GB/206322/431553/index.html')")
   .use-time 数据错误
-  .code 12340名
+  .code#code
 </template>
 <script>
 module.exports = {
   show: function () {
-    const useTime = owo.script.clock.data.time
+    const useTime = owo.script.clock.data.time || 200
     if (useTime > 20) {
       owo.query('.use-time')[0].innerText = `${parseInt(useTime / 60)} 分 ${useTime % 60} 秒`
     }
-    
+    if (window.pid) {
+      $.get('http://paike.people.com.cn/lianliankan2/index/handle', {id: window.pid, time: useTime}, function(data) {
+        owo.id.code.innerText = 'NO ' + data.rank
+      }, 'jsonp');
+    } else {
+      owo.id.code.innerText = '稍后再试'
+    }
   }
 }
 </script>

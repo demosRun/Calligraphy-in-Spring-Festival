@@ -1,0 +1,174 @@
+/* 这个文件里写的是全局样式,在各个页面都生效 */
+body, html, .page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: text;
+  font: normal 12px/180% "SimSun";
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+html {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+h1, h2, h3, h4, h5, input {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td{
+  margin: 0;
+  padding: 0;
+}
+
+.prop-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.prop-box .text-box {
+  position: absolute;
+  left: 58px;
+  z-index: 2;
+  top: 490px;
+}
+.prop-box .text-box ul {
+  font-family: STKaiti;
+  font-size: 32px;
+  line-height: 54px;
+  width: 400px;
+  top: 195px;
+  position: absolute;
+  left: 150px;
+}
+.prop-box .text-box li {
+  background-image: url('../resource/doit.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 20px;
+}
+.prop-box .name {
+  position: absolute;
+  top: 89px;
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  line-height: 60px;
+  font-family: STKaiti;
+  font-weight: bold;
+}
+.prop-box .next {
+  position: absolute;
+  left: 203px;
+  z-index: 3;
+  top: 1002px
+}
+
+.text {
+  position: absolute;
+  left: 104px;
+  z-index: 2;
+  top: 77px;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.6s, opacity 0.3s;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.show-card {
+  padding: 20px;
+  z-index: 99;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.check {
+  background-image: url('../resource/check.png');
+  background-position: -2px -8px;
+  background-size: 400px;
+}
+.page .clear {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 0;
+}
+.clear .text {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.text-bg {
+  position: absolute;
+  left: 20px;
+  z-index: 1;
+  top: 20px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.flower-3 {
+  position: absolute;
+  left: -11px;
+  z-index: 3;
+  top: 725px;
+  user-select: none;
+  pointer-events: none;
+}
+.flower-2 {
+  position: absolute;
+  left: 324px;
+  z-index: 2;
+  top: 570px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.scale-box {
+  background-image: url('../resource/page2.jpg');
+}
+
+.no-touch {
+  pointer-events: none;
+  user-select: none;
+}
